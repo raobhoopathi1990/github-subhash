@@ -5,8 +5,6 @@ services:
      image: bhupathirao/elasticsearch7.9.0:lates
      ports:
        - "8080:8080"
-     volumes:
-       - "/opt/tomcat/tomcat.backup:/usr/local/tomcat"
      networks:
        - net
    elasticsearch:
@@ -15,9 +13,6 @@ services:
      ports:
        - "9200:9200"
        - "9300:9300"
-     volumes:
-       - "/opt/elasticsearch/es7.9.0.backup:/opt/elasticsearch/data"
-       - "/opt/elasticsearch/es7.9.0.backup:/opt/elasticsearch/logs"
      networks:
        - net
 networks:
